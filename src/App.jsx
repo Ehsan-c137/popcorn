@@ -2,7 +2,7 @@ import { useEffect, useState, useDeferredValue, useRef } from "react";
 import StarRating from "./StarRating";
 import { useMovies } from "./useMovies";
 import { useLocalStorageState } from "./useLocalStorageState";
-import { usekey } from "./useKey";
+import { Usekey } from "./useKey";
 
 const average = (arr) =>
    arr?.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
@@ -363,7 +363,7 @@ function Logo() {
 function Search({ query, setQuery }) {
    const inputEl = useRef(null);
 
-   usekey("Enter", () => {
+   Usekey("Enter", () => {
       if (document.activeElement === inputEl.current) return;
    });
 
